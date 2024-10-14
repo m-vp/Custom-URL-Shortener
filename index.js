@@ -8,6 +8,8 @@ app.use(express.json())
 
 connect()
 
+
+app.get('/', (req,res)=> res.end('hello'))
 app.use('/url', require('./routes/url'))
 app.use('/:shortId', async (req,res)=>{
     const shortId = req.params.shortId;
